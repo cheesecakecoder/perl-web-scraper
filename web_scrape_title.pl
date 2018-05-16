@@ -16,9 +16,7 @@ my $response = $ua->request($req);
 my $respContent = $response->{_content};
 
 if ( (my $from_index = index($respContent, $extract_from)) != -1){
-	print $from_index;
 	if ( (my $to_index = index($respContent, $extract_to)) != -1){
-		print "To index = $to_index <br>\r\n";
 		$title = substr($respContent, $from_index+length($extract_from),
 						$to_index-$from_index-length($extract_from));
 		printf("Title is %s\r\n", $title);
