@@ -29,4 +29,3 @@ if ( (my $from_index = index($respContent, $extract_from)) != -1){
 }else{
 	print "Error: extract_from string not found in response.\r\n";
 }
-
